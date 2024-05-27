@@ -7,8 +7,8 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize)]
 pub struct PurgeAllSegmentsRequest {
     #[serde(rename = "userID")]
-    user_id: String,
+    pub user_id: String,
     #[serde(rename = "videoID")]
-    video_id: String,
-    service: String
+    pub video_id: String,
+    pub service: String
 }

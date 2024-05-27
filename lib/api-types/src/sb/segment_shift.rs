@@ -7,11 +7,11 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize)]
 pub struct SegmentShiftRequest {
     #[serde(rename = "videoID")]
-    video_id: String,
+    pub video_id: String,
     #[serde(rename = "userID")]
-    user_id: String,
+    pub user_id: String,
     #[serde(rename = "startTime")]
-    start_time: f64,
+    pub start_time: f64,
     #[serde(rename = "endTime")]
-    end_time: f64
+    pub end_time: f64
 }

@@ -7,9 +7,9 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize)]
 pub struct WarnUserRequest {
     #[serde(rename = "issuerUserID")]
-    issuer_user_id: String,
+    pub issuer_user_id: String,
     #[serde(rename = "userID")]
-    user_id: String,
-    reason: Option<String>,
-    enabled: Option<bool>
+    pub user_id: String,
+    pub reason: Option<String>,
+    pub enabled: Option<bool>
 }

@@ -7,6 +7,6 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize)]
 pub struct GetThumbnailRequest {
     #[serde(rename = "videoID")]
-    video_id: String,
-    time: i64
+    pub video_id: String,
+    pub time: i64
 }

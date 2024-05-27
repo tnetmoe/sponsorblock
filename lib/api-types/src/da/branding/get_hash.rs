@@ -8,11 +8,11 @@ use super::get::BrandingResponse;
 /// url params
 #[derive(Serialize, Deserialize)]
 pub struct GetBrandingHashRequest {
-    service: Option<String>,
+    pub service: Option<String>,
     #[serde(rename = "returnUserID")]
-    return_user_id: Option<String>,
+    pub return_user_id: Option<String>,
     #[serde(rename = "fetchAll")]
-    fetch_all: Option<String>
+    pub fetch_all: Option<String>
 }
 
 /// payload

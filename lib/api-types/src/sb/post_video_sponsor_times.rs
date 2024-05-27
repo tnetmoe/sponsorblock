@@ -8,11 +8,11 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize)]
 pub struct PostVideoSponsorTimesRequest {
     #[serde(rename = "videoID")]
-    video_id: String,
+    pub video_id: String,
     #[serde(rename = "startTime")]
-    start_time: Option<f64>,
+    pub start_time: Option<f64>,
     #[serde(rename = "endTime")]
-    end_time: Option<f64>,
+    pub end_time: Option<f64>,
     #[serde(rename = "userID")]
-    user_id: Option<String>
+    pub user_id: Option<String>
 }

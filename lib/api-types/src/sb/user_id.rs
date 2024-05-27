@@ -6,8 +6,8 @@ use serde::{Serialize, Deserialize};
 /// url params
 #[derive(Serialize, Deserialize)]
 pub struct UserIDRequest {
-    username: String,
-    exact: bool
+    pub username: String,
+    pub exact: bool
 }
 
 /// payload
@@ -17,7 +17,7 @@ pub struct UserIDResponse(Vec<UserSearch>);
 #[derive(Serialize, Deserialize)]
 pub struct UserSearch {
     #[serde(rename = "userName")]
-    username: String,
+    pub username: String,
     #[serde(rename = "userID")]
-    user_id: String
+    pub user_id: String
 }

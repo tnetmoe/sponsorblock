@@ -8,56 +8,56 @@ use super::user_info::UserId;
 #[derive(Serialize, Deserialize)]
 pub struct UserStatsRequest {
     #[serde(flatten)]
-    user_id: UserId,
+    pub user_id: UserId,
     #[serde(rename = "fetchCategoryStats")]
-    fetch_category_stats: bool,
+    pub fetch_category_stats: bool,
     #[serde(rename = "fetchActionTypeStats")]
-    fetch_action_type_stats: bool
+    pub fetch_action_type_stats: bool
 }
 
 /// payload
 #[derive(Serialize, Deserialize)]
 pub struct UserStatsResponse {
     #[serde(rename = "userID")]
-    user_id: String,
+    pub user_id: String,
     #[serde(rename = "userName")]
-    user_name: f64,
+    pub user_name: f64,
     #[serde(rename = "overallStats")]
-    overall_stats: OverallStats,
+    pub overall_stats: OverallStats,
     #[serde(rename = "categoryCount")]
-    category_count: Option<CategoryCount>,
+    pub category_count: Option<CategoryCount>,
     #[serde(rename = "actionTypeCount")]
-    action_type_count: Option<ActionTypeCount>,
+    pub action_type_count: Option<ActionTypeCount>,
 }
 
 #[derive(Serialize, Deserialize)]
 pub struct OverallStats {
     #[serde(rename = "minutesSaved")]
-    minutes_saved: f64,
+    pub minutes_saved: f64,
     #[serde(rename = "segmentCount")]
-    segment_count: i64,
+    pub segment_count: i64,
 }
 
 #[derive(Serialize, Deserialize)]
 pub struct CategoryCount {
-    sponsor: i64,
-    intro: i64,
-    outro: i64,
-    interaction: i64,
-    selfpromo: i64,
-    music_offtopic: i64,
-    preview: i64,
-    poi_highlight: i64,
-    filler: i64,
-    exclusive_access: i64,
-    chapter: i64
+    pub sponsor: i64,
+    pub intro: i64,
+    pub outro: i64,
+    pub interaction: i64,
+    pub selfpromo: i64,
+    pub music_offtopic: i64,
+    pub preview: i64,
+    pub poi_highlight: i64,
+    pub filler: i64,
+    pub exclusive_access: i64,
+    pub chapter: i64
 }
 
 #[derive(Serialize, Deserialize)]
 pub struct ActionTypeCount {
-    skip: i64,
-    mute: i64,
-    full: i64,
-    poi: i64,
-    chapter: i64
+    pub skip: i64,
+    pub mute: i64,
+    pub full: i64,
+    pub poi: i64,
+    pub chapter: i64
 }

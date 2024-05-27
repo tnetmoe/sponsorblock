@@ -7,12 +7,12 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize)]
 pub struct AddUserAsTempVIPRequest {
     #[serde(rename = "userID")]
-    user_id: String,
+    pub user_id: String,
     #[serde(rename = "adminUserID")]
-    admin_user_id: String,
+    pub admin_user_id: String,
     #[serde(rename = "channelVideoID")]
-    channel_video_id: String,
-    enabled: String
+    pub channel_video_id: String,
+    pub enabled: String
     
 }
 

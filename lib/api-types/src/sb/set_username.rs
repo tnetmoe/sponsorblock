@@ -7,8 +7,8 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize)]
 pub struct SetUsername {
     #[serde(rename = "userID")]
-    user_id: String,
-    username: Option<String>,
+    pub user_id: String,
+    pub username: Option<String>,
     #[serde(rename = "adminUserID")]
-    admin_user_id: Option<String>
+    pub admin_user_id: Option<String>
 }

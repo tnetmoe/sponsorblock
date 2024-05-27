@@ -7,5 +7,5 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize)]
 pub struct ViewedVideoSponsorTimeRequest {
     #[serde(rename = "UUID")]
-    uuid: String
+    pub uuid: String
 }

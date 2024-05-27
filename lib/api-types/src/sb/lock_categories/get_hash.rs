@@ -6,7 +6,7 @@ use serde::{Serialize, Deserialize};
 /// url params
 #[derive(Serialize, Deserialize)]
 pub struct LockCategoriesHashRequest {
-    prefix: String
+    pub prefix: String
 }
 
 /// payload
@@ -16,8 +16,8 @@ pub struct LockCategoriesHashResponse(Vec<LockCategorieHash>);
 #[derive(Serialize, Deserialize)]
 pub struct LockCategorieHash {
     #[serde(rename = "videoID")]
-    video_id: String,
-    hash: String,
-    categories: Vec<String>,
-    reason: String
+    pub video_id: String,
+    pub hash: String,
+    pub categories: Vec<String>,
+    pub reason: String
 }

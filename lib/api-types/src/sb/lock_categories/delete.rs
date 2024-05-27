@@ -7,14 +7,14 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize)]
 pub struct LockCategoriesRequest {
     #[serde(rename = "videoID")]
-    video_id: String,
+    pub video_id: String,
     #[serde(rename = "userID")]
-    user_id: String,
-    categories: Vec<String>
+    pub user_id: String,
+    pub categories: Vec<String>
 }
 
 /// payload
 #[derive(Serialize, Deserialize)]
 pub struct LockCategoriesResponse {
-    message: String
+    pub message: String
 }

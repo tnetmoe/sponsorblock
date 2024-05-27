@@ -7,22 +7,22 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize)]
 pub struct GetTotalStatsRequest {
     #[serde(rename = "countContributingUsers")]
-    count_contributing_users: Option<bool>
+    pub count_contributing_users: Option<bool>
 }
 
 /// payload
 #[derive(Serialize, Deserialize)]
 pub struct GetTotalStatsResponse {
     #[serde(rename = "userCount")]
-    user_count: Option<i64>,
+    pub user_count: Option<i64>,
     #[serde(rename = "activeUsers")]
-    active_users: i64,
+    pub active_users: i64,
     #[serde(rename = "apiUsers")]
-    api_users: i64,
+    pub api_users: i64,
     #[serde(rename = "viewCount")]
-    view_count: i64,
+    pub view_count: i64,
     #[serde(rename = "totalSubmissions")]
-    total_submissions: i64,
+    pub total_submissions: i64,
     #[serde(rename = "minutesSaved")]
-    minutes_saved: f64
+    pub minutes_saved: f64
 }

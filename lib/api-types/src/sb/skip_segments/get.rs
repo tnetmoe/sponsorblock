@@ -7,14 +7,14 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize)]
 pub struct SkipSegmentsRequest {
     #[serde(rename = "videoID")]
-    video_id: String,
+    pub video_id: String,
     #[serde(flatten)]
-    category: Category,
+    pub category: Category,
     #[serde(flatten)]
-    required_segment: RequiredSegment,
+    pub required_segment: RequiredSegment,
     #[serde(flatten)]
-    action_type: ActionType,
-    service: Option<String>
+    pub action_type: ActionType,
+    pub service: Option<String>
 }
 
 /// payload
@@ -23,17 +23,17 @@ pub struct SkipSegmentsResponse(Vec<SkipSegmentResponse>);
 
 #[derive(Serialize, Deserialize)]
 pub struct SkipSegmentResponse {
-    segment: [f64; 2],
+    pub segment: [f64; 2],
     #[serde(rename = "UUID")]
-    uuid: String,
-    category: String,
+    pub uuid: String,
+    pub category: String,
     #[serde(rename = "videoDuration")]
-    video_duration: f64,
+    pub video_duration: f64,
     #[serde(rename = "actionType")]
-    action_type: String,
-    locked: i64,
-    votes: i64,
-    description: String
+    pub action_type: String,
+    pub locked: i64,
+    pub votes: i64,
+    pub description: String
 }
 
 #[derive(Serialize, Deserialize)]

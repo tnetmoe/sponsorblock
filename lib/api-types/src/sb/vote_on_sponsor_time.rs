@@ -13,17 +13,18 @@ pub enum VoteOnSponsorTimeRequest {
 #[derive(Serialize, Deserialize)]
 pub struct NormalVote {
     #[serde(rename = "UUID")]
-    uuid: String,
+    pub uuid: String,
     #[serde(rename = "userID")]
-    user_id: String,
-    r#type: i64
+    pub user_id: String,
+    // serialized to "type"
+    pub r#type: i64
 }
 
 #[derive(Serialize, Deserialize)]
 pub struct CategoryVote {
     #[serde(rename = "UUID")]
-    uuid: String,
+    pub uuid: String,
     #[serde(rename = "userID")]
-    user_id: String,
-    category: String
+    pub user_id: String,
+    pub category: String
 }

@@ -7,10 +7,10 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize)]
 pub struct ShadowBanUserRequest {
     #[serde(rename = "userID")]
-    user_id: String,
+    pub user_id: String,
     #[serde(rename = "adminUserID")]
-    admin_user_id: String,
+    pub admin_user_id: String,
     #[serde(rename = "unHideOldSubmissions")]
-    un_hide_old_submissions: bool,
-    categories: Option<String>
+    pub un_hide_old_submissions: bool,
+    pub categories: Option<String>
 }

@@ -7,5 +7,5 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize)]
 pub struct GetDaysSavedFormattedResponse {
     #[serde(rename = "daysSaved")]
-    days_saved: f64
+    pub days_saved: f64
 }

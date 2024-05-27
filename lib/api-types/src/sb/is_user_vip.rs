@@ -7,13 +7,13 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize)]
 pub struct IsUserVipRequest {
     #[serde(rename = "userID")]
-    user_id: String
+    pub user_id: String
 }
 
 /// payload
 #[derive(Serialize, Deserialize)]
 pub struct IsUserVipResponse {
     #[serde(rename = "hashedUserID")]
-    hashed_user_id: String,
-    vip: bool
+    pub hashed_user_id: String,
+    pub vip: bool
 }

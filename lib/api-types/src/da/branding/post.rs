@@ -7,26 +7,26 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize)]
 pub struct BrandingRequest {
     #[serde(rename = "videoID")]
-    video_id: String,
+    pub video_id: String,
     #[serde(rename = "userID")]
-    user_id: String,
+    pub user_id: String,
     #[serde(rename = "userAgent")]
-    user_agent: String,
-    service: Option<String>,
-    title: Option<Title>,
-    thumbnail: Option<Thumbnail>,
-    downvote: Option<bool>,
+    pub user_agent: String,
+    pub service: Option<String>,
+    pub title: Option<Title>,
+    pub thumbnail: Option<Thumbnail>,
+    pub downvote: Option<bool>,
     #[serde(rename = "autoLock")]
-    auto_lock: Option<bool>
+    pub auto_lock: Option<bool>
 }
 
 #[derive(Serialize, Deserialize)]
 pub struct Title {
-    title: String
+    pub title: String
 }
 
 #[derive(Serialize, Deserialize)]
 pub struct Thumbnail {
-    timestamp: Option<i64>,
-    original: bool
+    pub timestamp: Option<i64>,
+    pub original: bool
 }

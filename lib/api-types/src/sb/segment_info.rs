@@ -7,7 +7,7 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize)]
 pub struct SegmentInfoRequest {
     #[serde(flatten)]
-    uuid: UUID
+    pub uuid: UUID
 }
 
 /// payload
@@ -25,33 +25,33 @@ pub enum UUID {
 #[derive(Serialize, Deserialize)]
 pub struct SegmentInfo {
     #[serde(rename = "videoID")]
-    video_id: String,
+    pub video_id: String,
     #[serde(rename = "startTime")]
-    start_time: f64,
+    pub start_time: f64,
     #[serde(rename = "endTime")]
-    end_time: f64,
-    votes: i64,
-    locked: i64,
+    pub end_time: f64,
+    pub votes: i64,
+    pub locked: i64,
     #[serde(rename = "UUID")]
-    uuid: String,
+    pub uuid: String,
     #[serde(rename = "userID")]
-    user_id: String,
+    pub user_id: String,
     #[serde(rename = "timeSubmitted")]
-    time_submitted: i64,
-    views: i64,
-    category: String,
-    service: String,
+    pub time_submitted: i64,
+    pub views: i64,
+    pub category: String,
+    pub service: String,
     #[serde(rename = "actionType")]
-    action_type: String,
+    pub action_type: String,
     #[serde(rename = "videoDuration")]
-    video_duration: i64,
-    hidden: i64,
-    reputation: i64,
+    pub video_duration: i64,
+    pub hidden: i64,
+    pub reputation: i64,
     #[serde(rename = "shadowHidden")]
-    shadow_hidden: i64,
+    pub shadow_hidden: i64,
     #[serde(rename = "hashedVideoID")]
-    hashed_video_id: String,
+    pub hashed_video_id: String,
     #[serde(rename = "userAgent")]
-    user_agent: String,
-    description: String
+    pub user_agent: String,
+    pub description: String
 }

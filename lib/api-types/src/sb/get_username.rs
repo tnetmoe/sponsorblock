@@ -7,12 +7,12 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize)]
 pub struct GetUsernameRequest {
     #[serde(rename = "userID")]
-    user_id: String
+    pub user_id: String
 }
 
 /// payload
 #[derive(Serialize, Deserialize)]
 pub struct GetUsernameResponse {
     #[serde(rename = "userName")]
-    username: String
+    pub username: String
 }

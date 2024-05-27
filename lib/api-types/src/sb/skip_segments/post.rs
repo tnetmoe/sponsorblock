@@ -8,37 +8,37 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize, Debug)]
 pub struct SkipSegmentsRequest {
     #[serde(rename = "videoID")]
-    video_id: String,
+    pub video_id: String,
     #[serde(rename = "startTime")]
-    start_time: f64,
+    pub start_time: f64,
     #[serde(rename = "endTime")]
-    end_time: f64,
-    category: String,
+    pub end_time: f64,
+    pub category: String,
     #[serde(rename = "userID")]
-    user_id: String,
+    pub user_id: String,
     #[serde(rename = "userAgent")]
-    user_agent: String,
-    service: Option<String>,
+    pub user_agent: String,
+    pub service: Option<String>,
     #[serde(rename = "videoDuration")]
-    video_duration: f64,
+    pub video_duration: f64,
     #[serde(rename = "actionType")]
-    action_type: String,
-    description: String
+    pub action_type: String,
+    pub description: String
 }
 
 /// payload
 #[derive(Serialize, Deserialize, Debug)]
 pub struct SkipSegmentsBodyRequest {
     #[serde(rename = "videoID")]
-    video_id: String,
+    pub video_id: String,
     #[serde(rename = "userID")]
-    user_id: String,
+    pub user_id: String,
     #[serde(rename = "userAgent")]
-    user_agent: String,
-    service: Option<String>,
+    pub user_agent: String,
+    pub service: Option<String>,
     #[serde(rename = "videoDuration")]
-    video_duration: Option<f64>,
-    segments: Vec<Segment>
+    pub video_duration: Option<f64>,
+    pub segments: Vec<Segment>
 }
 
 /// payload
@@ -48,16 +48,16 @@ pub struct SkipSegmentsResponse(Vec<SkipSegmentResponse>);
 #[derive(Serialize, Deserialize, Debug)]
 pub struct SkipSegmentResponse {
     #[serde(rename = "UUID")]
-    uuid: String,
-    category: String,
-    segment: [f64; 2]
+    pub uuid: String,
+    pub category: String,
+    pub segment: [f64; 2]
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Segment {
-    segment: [f64; 2],
-    category: String,
+    pub segment: [f64; 2],
+    pub category: String,
     #[serde(rename = "actionType")]
-    action_type: Option<String>,
-    description: String
+    pub action_type: Option<String>,
+    pub description: String
 }

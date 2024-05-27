@@ -7,18 +7,18 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize)]
 pub struct GetTopUsersRequest {
     #[serde(rename = "sortType")]
-    sort_type: u8
+    pub sort_type: u8
 }
 
 /// payload
 #[derive(Serialize, Deserialize)]
 pub struct GetTopUsersResponse {
     #[serde(rename = "userNames")]
-    user_names: Vec<String>,
+    pub user_names: Vec<String>,
     #[serde(rename = "viewCounts")]
-    view_counts: Vec<i64>,
+    pub view_counts: Vec<i64>,
     #[serde(rename = "totalSubmissions")]
-    total_submissions: Vec<i64>,
+    pub total_submissions: Vec<i64>,
     #[serde(rename = "minutesSaved")]
-    minutes_saved: Vec<f64>
+    pub minutes_saved: Vec<f64>
 }

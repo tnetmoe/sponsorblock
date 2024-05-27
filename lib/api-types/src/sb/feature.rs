@@ -7,9 +7,9 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize)]
 pub struct FeatureRequest {
     #[serde(rename = "userID")]
-    user_id: String,
+    pub user_id: String,
     #[serde(rename = "adminUserID")]
-    admin_user_id: String,
-    feature: i64,
-    enabled: bool
+    pub admin_user_id: String,
+    pub feature: i64,
+    pub enabled: bool
 }

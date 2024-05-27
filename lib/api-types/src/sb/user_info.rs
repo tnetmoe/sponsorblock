@@ -8,34 +8,34 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize)]
 pub struct UserInfoRequest {
     #[serde(flatten)]
-    user_id: UserId,
+    pub user_id: UserId,
     #[serde(flatten)]
-    value: Value
+    pub value: Value
 }
 
 /// payload
 #[derive(Serialize, Deserialize)]
 pub struct UserInfoResponse {
     #[serde(rename = "userID")]
-    user_id: String,
+    pub user_id: String,
     #[serde(rename = "userName")]
-    user_name: String,
+    pub user_name: String,
     #[serde(rename = "minutesSaved")]
-    minutes_saved: f64,
+    pub minutes_saved: f64,
     #[serde(rename = "segmentCount")]
-    segment_count: i64,
+    pub segment_count: i64,
     #[serde(rename = "ignoredSegmentCount")]
-    ignored_segment_count: i64,
+    pub ignored_segment_count: i64,
     #[serde(rename = "viewCount")]
-    view_count: i64,
+    pub view_count: i64,
     #[serde(rename = "ignoredViewCount")]
-    ignored_view_count: i64,
-    warnings: i64,
-    reputation: i64,
-    vip: i64,
+    pub ignored_view_count: i64,
+    pub warnings: i64,
+    pub reputation: i64,
+    pub vip: i64,
     #[serde(rename = "lastSegmentID")]
-    last_segment_id: String,
-    permissions: HashMap<String, bool>
+    pub last_segment_id: String,
+    pub permissions: HashMap<String, bool>
 }
 
 #[derive(Serialize, Deserialize)]

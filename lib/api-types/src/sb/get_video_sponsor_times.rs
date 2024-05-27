@@ -8,22 +8,22 @@ use serde::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize)]
 pub struct GetVideoSponsorTimesRequest {
     #[serde(rename = "videoID")]
-    video_id: String,
+    pub video_id: String,
 }
 
 /// payload
 #[derive(Serialize, Deserialize)]
 pub struct GetVideoSponsorTimesResponse {
     #[serde(rename = "sponsorTimes")]
-    sponsor_times: Vec<SponsorTimes>,
+    pub sponsor_times: Vec<SponsorTimes>,
     #[serde(rename = "UUIDs")]
-    segments: Vec<String>
+    pub segments: Vec<String>
 }
 
 #[derive(Serialize, Deserialize)]
 pub struct SponsorTimes {
     #[serde(rename = "startTime")]
-    start_time: f64,
+    pub start_time: f64,
     #[serde(rename = "endTime ")]
-    end_time: f64,
+    pub end_time: f64,
 }
