@@ -6,7 +6,7 @@ use serde::{Serialize, Deserialize};
 
 /// url params
 #[derive(Serialize, Deserialize)]
-pub struct PostVideoSponsorTimesRequest {
+pub struct PostVideoSponsorTimesRequestQuery {
     #[serde(rename = "videoID")]
     pub video_id: String,
     #[serde(rename = "startTime")]

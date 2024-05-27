@@ -5,14 +5,14 @@ use serde::{Serialize, Deserialize};
 
 /// url params
 #[derive(Serialize, Deserialize)]
-pub struct SegmentInfoRequest {
+pub struct SegmentInfoRequestQuery {
     #[serde(flatten)]
     pub uuid: UUID
 }
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct SegmentInfoResponse(Vec<SegmentInfo>);
+pub struct SegmentInfoResponseBody(Vec<SegmentInfo>);
 
 #[derive(Serialize, Deserialize)]
 pub enum UUID {

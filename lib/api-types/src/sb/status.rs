@@ -5,7 +5,7 @@ use serde::{Serialize, Deserialize};
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct StatusResponse {
+pub struct StatusResponseBody {
     pub uptime: i64,
     pub commit: String,
     pub db: i64,

@@ -3,10 +3,9 @@
 //! https://wiki.sponsor.ajay.app/w/API_Docs#POST_/api/skipSegments
 use serde::{Serialize, Deserialize};
 
-
 /// url params
 #[derive(Serialize, Deserialize, Debug)]
-pub struct SkipSegmentsRequest {
+pub struct SkipSegmentsRequestQuery {
     #[serde(rename = "videoID")]
     pub video_id: String,
     #[serde(rename = "startTime")]
@@ -28,7 +27,7 @@ pub struct SkipSegmentsRequest {
 
 /// payload
 #[derive(Serialize, Deserialize, Debug)]
-pub struct SkipSegmentsBodyRequest {
+pub struct SkipSegmentsRequestBody {
     #[serde(rename = "videoID")]
     pub video_id: String,
     #[serde(rename = "userID")]
@@ -43,7 +42,7 @@ pub struct SkipSegmentsBodyRequest {
 
 /// payload
 #[derive(Serialize, Deserialize, Debug)]
-pub struct SkipSegmentsResponse(Vec<SkipSegmentResponse>);
+pub struct SkipSegmentsResponseBody(Vec<SkipSegmentResponse>);
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct SkipSegmentResponse {

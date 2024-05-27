@@ -6,14 +6,14 @@ use serde::{Serialize, Deserialize};
 
 /// url params
 #[derive(Serialize, Deserialize)]
-pub struct GetVideoSponsorTimesRequest {
+pub struct GetVideoSponsorTimesRequestQuery {
     #[serde(rename = "videoID")]
     pub video_id: String,
 }
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct GetVideoSponsorTimesResponse {
+pub struct GetVideoSponsorTimesResponseBody {
     #[serde(rename = "sponsorTimes")]
     pub sponsor_times: Vec<SponsorTimes>,
     #[serde(rename = "UUIDs")]

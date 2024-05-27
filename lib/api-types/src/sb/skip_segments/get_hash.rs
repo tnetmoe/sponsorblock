@@ -6,7 +6,7 @@ use super::get::{Category, RequiredSegment, ActionType, SkipSegmentResponse};
 
 /// url params
 #[derive(Serialize, Deserialize)]
-pub struct SkipSegmentsHashRequest {
+pub struct SkipSegmentsHashRequestQuery {
     pub prefix: String,
     #[serde(flatten)]
     pub category: Category,
@@ -19,7 +19,7 @@ pub struct SkipSegmentsHashRequest {
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct SkipSegmentsHashResponse {
+pub struct SkipSegmentsHashResponseBody {
     #[serde(rename = "videoID")]
     pub video_id: String,
     pub segments: Vec<SkipSegmentResponse>

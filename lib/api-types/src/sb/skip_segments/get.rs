@@ -5,7 +5,7 @@ use serde::{Serialize, Deserialize};
 
 /// url params
 #[derive(Serialize, Deserialize)]
-pub struct SkipSegmentsRequest {
+pub struct SkipSegmentsRequestQuery {
     #[serde(rename = "videoID")]
     pub video_id: String,
     #[serde(flatten)]
@@ -19,7 +19,7 @@ pub struct SkipSegmentsRequest {
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct SkipSegmentsResponse(Vec<SkipSegmentResponse>);
+pub struct SkipSegmentsResponseBody(Vec<SkipSegmentResponse>);
 
 #[derive(Serialize, Deserialize)]
 pub struct SkipSegmentResponse {

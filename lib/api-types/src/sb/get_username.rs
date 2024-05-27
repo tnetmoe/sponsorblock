@@ -5,14 +5,14 @@ use serde::{Serialize, Deserialize};
 
 /// url params
 #[derive(Serialize, Deserialize)]
-pub struct GetUsernameRequest {
+pub struct GetUsernameRequestQuery {
     #[serde(rename = "userID")]
     pub user_id: String
 }
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct GetUsernameResponse {
+pub struct GetUsernameResponseBody {
     #[serde(rename = "userName")]
     pub username: String
 }

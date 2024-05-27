@@ -3,9 +3,9 @@
 //! https://wiki.sponsor.ajay.app/w/API_Docs/DeArrow#GET_/api/v1/getThumbnail
 use serde::{Serialize, Deserialize};
 
-/// url params
+
 #[derive(Serialize, Deserialize)]
-pub struct GetThumbnailRequest {
+pub struct GetThumbnailQueryParams {
     #[serde(rename = "videoID")]
     pub video_id: String,
     pub time: i64

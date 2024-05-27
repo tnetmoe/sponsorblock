@@ -5,7 +5,7 @@ use serde::{Serialize, Deserialize};
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct ClearCacheRequest {
+pub struct ClearCacheRequestBody {
     #[serde(rename = "userID")]
     pub user_id: String,
     #[serde(rename = "videoID")]
@@ -14,4 +14,4 @@ pub struct ClearCacheRequest {
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct ClearCacheResponse(String);
+pub struct ClearCacheResponseBody(String);

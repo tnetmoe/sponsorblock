@@ -5,7 +5,7 @@ use serde::{Serialize, Deserialize};
 
 /// url params
 #[derive(Serialize, Deserialize)]
-pub struct AddUserAsTempVIPRequest {
+pub struct AddUserAsTempVIPRequestQuery {
     #[serde(rename = "userID")]
     pub user_id: String,
     #[serde(rename = "adminUserID")]
@@ -18,4 +18,4 @@ pub struct AddUserAsTempVIPRequest {
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct AddUserAsTempVIPResponse(String, String);
+pub struct AddUserAsTempVIPResponseBody(String, String);

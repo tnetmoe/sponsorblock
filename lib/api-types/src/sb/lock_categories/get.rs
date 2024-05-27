@@ -5,7 +5,7 @@ use serde::{Serialize, Deserialize};
 
 /// url params
 #[derive(Serialize, Deserialize)]
-pub struct LockCategoriesRequest {
+pub struct LockCategoriesRequestQuery {
     #[serde(rename = "videoID")]
     pub video_id: String,
     #[serde(rename = "actionTypes")]
@@ -14,7 +14,7 @@ pub struct LockCategoriesRequest {
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct LockCategoriesResponse {
+pub struct LockCategoriesResponseBody {
     pub categories: Vec<String>,
     pub reason: String,
     #[serde(rename = "actionTypes")]

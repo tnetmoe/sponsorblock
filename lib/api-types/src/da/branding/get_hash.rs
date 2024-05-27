@@ -7,7 +7,7 @@ use super::get::BrandingResponse;
 
 /// url params
 #[derive(Serialize, Deserialize)]
-pub struct GetBrandingHashRequest {
+pub struct GetBrandingHashRequestQuery {
     pub service: Option<String>,
     #[serde(rename = "returnUserID")]
     pub return_user_id: Option<String>,
@@ -17,4 +17,4 @@ pub struct GetBrandingHashRequest {
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct GetBrandingHashResponse(HashMap<String, BrandingResponse>);
+pub struct GetBrandingHashResponseBody(HashMap<String, BrandingResponse>);

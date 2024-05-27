@@ -5,7 +5,7 @@ use serde::{Serialize, Deserialize};
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct GetDaysSavedFormattedResponse {
+pub struct GetDaysSavedFormattedResponseBody {
     #[serde(rename = "daysSaved")]
     pub days_saved: f64
 }

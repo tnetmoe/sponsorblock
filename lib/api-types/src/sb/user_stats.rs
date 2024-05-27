@@ -6,7 +6,7 @@ use super::user_info::UserId;
 
 /// url params
 #[derive(Serialize, Deserialize)]
-pub struct UserStatsRequest {
+pub struct UserStatsRequestQuery {
     #[serde(flatten)]
     pub user_id: UserId,
     #[serde(rename = "fetchCategoryStats")]
@@ -17,7 +17,7 @@ pub struct UserStatsRequest {
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct UserStatsResponse {
+pub struct UserStatsResponseBody {
     #[serde(rename = "userID")]
     pub user_id: String,
     #[serde(rename = "userName")]

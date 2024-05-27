@@ -6,7 +6,7 @@ use super::skip_segments::get::Category;
 
 /// url params
 #[derive(Serialize, Deserialize)]
-pub struct LockReasonRequest {
+pub struct LockReasonRequestQuery {
     #[serde(rename = "videoID")]
     pub video_id: String,
     #[serde(flatten)]
@@ -17,7 +17,7 @@ pub struct LockReasonRequest {
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct LockReasonResponse(Vec<LockReason>);
+pub struct LockReasonResponseBody(Vec<LockReason>);
 
 #[derive(Serialize, Deserialize)]
 pub struct LockReason {

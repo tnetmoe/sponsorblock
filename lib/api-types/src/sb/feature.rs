@@ -5,7 +5,7 @@ use serde::{Serialize, Deserialize};
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct FeatureRequest {
+pub struct FeatureRequestBody {
     #[serde(rename = "userID")]
     pub user_id: String,
     #[serde(rename = "adminUserID")]

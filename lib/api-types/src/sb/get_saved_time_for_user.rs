@@ -5,14 +5,14 @@ use serde::{Serialize, Deserialize};
 
 /// url params
 #[derive(Serialize, Deserialize)]
-pub struct GetSavedTimeForUser {
+pub struct GetSavedTimeForUserQuery {
     #[serde(rename = "userID")]
     pub user_id: String
 }
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct GetSavedTimeForUserResponse {
+pub struct GetSavedTimeForUserResponseBody {
     #[serde(rename = "timeSaved")]
     pub time_saved: f64
 }

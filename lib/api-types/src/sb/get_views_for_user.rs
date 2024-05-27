@@ -5,14 +5,14 @@ use serde::{Serialize, Deserialize};
 
 /// url params
 #[derive(Serialize, Deserialize)]
-pub struct GetViewsForUser {
+pub struct GetViewsForUserRequestQuery {
     #[serde(rename = "userID")]
     pub user_id: String
 }
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct GetViewsForUserResponse {
+pub struct GetViewsForUserResponseBody {
     #[serde(rename = "viewCount")]
     pub view_count: i64
 }

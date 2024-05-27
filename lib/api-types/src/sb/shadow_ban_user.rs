@@ -5,7 +5,7 @@ use serde::{Serialize, Deserialize};
 
 /// url params
 #[derive(Serialize, Deserialize)]
-pub struct ShadowBanUserRequest {
+pub struct ShadowBanUserRequestQuery {
     #[serde(rename = "userID")]
     pub user_id: String,
     #[serde(rename = "adminUserID")]

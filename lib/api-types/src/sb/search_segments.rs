@@ -29,7 +29,7 @@ pub struct SearchSegmentsRequest {
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct SearchSegmentsResponse {
+pub struct SearchSegmentsResponseBody {
     #[serde(rename = "segmentCount")]
     pub segment_count: i64,
     pub page: i64,

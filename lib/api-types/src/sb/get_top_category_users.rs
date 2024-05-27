@@ -5,7 +5,7 @@ use serde::{Serialize, Deserialize};
 
 /// url params
 #[derive(Serialize, Deserialize)]
-pub struct GetTopCategoryUsersRequest {
+pub struct GetTopCategoryUsersRequestQuery {
     #[serde(rename = "sortType")]
     pub time_frame: u8,
     pub category: String
@@ -13,7 +13,7 @@ pub struct GetTopCategoryUsersRequest {
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct GetTopCategoryUsersResponse {
+pub struct GetTopCategoryUsersResponseBody {
     #[serde(rename = "userNames")]
     pub user_names: Vec<String>,
     #[serde(rename = "viewCounts")]

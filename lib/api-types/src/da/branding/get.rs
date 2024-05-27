@@ -5,7 +5,7 @@ use serde::{Serialize, Deserialize};
 
 /// url params
 #[derive(Serialize, Deserialize)]
-pub struct BrandingRequest {
+pub struct BrandingRequestQuery {
     #[serde(rename = "videoID")]
     pub video_id: String,
     pub service: Option<String>,
@@ -17,7 +17,7 @@ pub struct BrandingRequest {
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct BrandingResponse {
+pub struct BrandingResponseBody {
     pub titles: Vec<String>,
     pub thumbnails: Vec<String>,
     #[serde(rename = "randomTime")]

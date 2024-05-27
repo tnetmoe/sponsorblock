@@ -5,7 +5,7 @@ use serde::{Serialize, Deserialize};
 
 /// url params
 #[derive(Serialize, Deserialize)]
-pub enum VoteOnSponsorTimeRequest {
+pub enum VoteOnSponsorTimeRequestQuery {
     Normal(NormalVote),
     Category(CategoryVote)
 }

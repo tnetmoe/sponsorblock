@@ -5,14 +5,14 @@ use serde::{Serialize, Deserialize};
 
 /// url params
 #[derive(Serialize, Deserialize)]
-pub struct UserIDRequest {
+pub struct UserIDRequestQuery {
     pub username: String,
     pub exact: bool
 }
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct UserIDResponse(Vec<UserSearch>);
+pub struct UserIDResponseBody(Vec<UserSearch>);
 
 #[derive(Serialize, Deserialize)]
 pub struct UserSearch {

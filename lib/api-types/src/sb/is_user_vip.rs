@@ -5,14 +5,14 @@ use serde::{Serialize, Deserialize};
 
 /// url params
 #[derive(Serialize, Deserialize)]
-pub struct IsUserVipRequest {
+pub struct IsUserVipRequestQuery {
     #[serde(rename = "userID")]
     pub user_id: String
 }
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct IsUserVipResponse {
+pub struct IsUserVipResponseBody {
     #[serde(rename = "hashedUserID")]
     pub hashed_user_id: String,
     pub vip: bool

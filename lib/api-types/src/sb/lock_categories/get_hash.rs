@@ -5,13 +5,13 @@ use serde::{Serialize, Deserialize};
 
 /// url params
 #[derive(Serialize, Deserialize)]
-pub struct LockCategoriesHashRequest {
+pub struct LockCategoriesHashRequestQuery {
     pub prefix: String
 }
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct LockCategoriesHashResponse(Vec<LockCategorieHash>);
+pub struct LockCategoriesHashResponseBody(Vec<LockCategorieHash>);
 
 #[derive(Serialize, Deserialize)]
 pub struct LockCategorieHash {

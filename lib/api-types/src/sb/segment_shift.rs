@@ -5,7 +5,7 @@ use serde::{Serialize, Deserialize};
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct SegmentShiftRequest {
+pub struct SegmentShiftRequestBody {
     #[serde(rename = "videoID")]
     pub video_id: String,
     #[serde(rename = "userID")]

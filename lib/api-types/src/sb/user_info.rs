@@ -6,7 +6,7 @@ use serde::{Serialize, Deserialize};
 
 /// url params
 #[derive(Serialize, Deserialize)]
-pub struct UserInfoRequest {
+pub struct UserInfoRequestQuery {
     #[serde(flatten)]
     pub user_id: UserId,
     #[serde(flatten)]
@@ -15,7 +15,7 @@ pub struct UserInfoRequest {
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct UserInfoResponse {
+pub struct UserInfoResponseBody {
     #[serde(rename = "userID")]
     pub user_id: String,
     #[serde(rename = "userName")]
