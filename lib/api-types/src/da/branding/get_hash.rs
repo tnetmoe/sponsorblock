@@ -3,7 +3,7 @@
 //! https://wiki.sponsor.ajay.app/w/API_Docs/DeArrow#GET_/api/branding/:sha256HashPrefix
 use std::collections::HashMap;
 use serde::{Serialize, Deserialize};
-use super::get::BrandingResponse;
+use super::get::BrandingResponseBody;
 
 /// url params
 #[derive(Serialize, Deserialize)]
@@ -17,4 +17,4 @@ pub struct GetBrandingHashRequestQuery {
 
 /// payload
 #[derive(Serialize, Deserialize)]
-pub struct GetBrandingHashResponseBody(HashMap<String, BrandingResponse>);
+pub struct GetBrandingHashResponseBody(HashMap<String, BrandingResponseBody>);
