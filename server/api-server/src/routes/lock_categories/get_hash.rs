@@ -6,6 +6,6 @@ use axum::{
 };
 use sb_api_types::sb::lock_categories::get_hash::{LockCategoriesHashRequestQuery, LockCategoriesHashResponseBody};
 
-pub async fn get_hash(Query(query): Query<LockCategoriesHashRequestQuery>) -> Result<Json<LockCategoriesHashResponseBody>, StatusCode> {
+pub async fn get_hash(Query(_query): Query<LockCategoriesHashRequestQuery>) -> Result<Json<LockCategoriesHashResponseBody>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }

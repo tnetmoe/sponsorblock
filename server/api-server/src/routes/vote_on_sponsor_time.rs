@@ -14,10 +14,10 @@ pub async fn post_vote(Query(query): Query<VoteOnSponsorTimeRequestQuery>) -> Re
     }
 }
 
-async fn handle_normal_vote(query: VoteOnSponsorTimeRequestQuery) -> Result<Json<()>, StatusCode> {
+async fn handle_normal_vote(_query: VoteOnSponsorTimeRequestQuery) -> Result<Json<()>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }
 
-async fn handle_category_vote(query: VoteOnSponsorTimeRequestQuery) -> Result<Json<()>, StatusCode> {
+async fn handle_category_vote(_query: VoteOnSponsorTimeRequestQuery) -> Result<Json<()>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }

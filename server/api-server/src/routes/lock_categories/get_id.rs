@@ -6,6 +6,6 @@ use axum::{
 };
 use sb_api_types::sb::lock_categories::get::{LockCategoriesRequestQuery, LockCategoriesResponseBody};
 
-pub async fn get_id(Query(query): Query<LockCategoriesRequestQuery>) -> Result<Json<LockCategoriesResponseBody>, StatusCode> {
+pub async fn get_id(Query(_query): Query<LockCategoriesRequestQuery>) -> Result<Json<LockCategoriesResponseBody>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }

@@ -6,6 +6,6 @@ use axum::{
 };
 use sb_api_types::sb::add_user_as_vip::AddUserAsVIPRequestQuery;
 
-pub async fn post_add_user_as_vip(Query(query): Query<AddUserAsVIPRequestQuery>) -> Result<Json<()>, StatusCode> {
+pub async fn post_add_user_as_vip(Query(_query): Query<AddUserAsVIPRequestQuery>) -> Result<Json<()>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }

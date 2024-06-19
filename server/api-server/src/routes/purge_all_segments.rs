@@ -6,6 +6,6 @@ use axum::{
 };
 use sb_api_types::sb::purge_all_segments::PurgeAllSegmentsRequestBody;
 
-pub async fn post_purge_all_segments(Json(body): Json<PurgeAllSegmentsRequestBody>) -> Result<Json<()>, StatusCode> {
+pub async fn post_purge_all_segments(Json(_body): Json<PurgeAllSegmentsRequestBody>) -> Result<Json<()>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }

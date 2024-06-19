@@ -29,7 +29,7 @@ mod add_user_as_temp_vip;
 mod feature;
 mod add_user_as_vip;
 use axum::{
-    routing::{get, post, delete},
+    routing::{get, post},
     Router
 };
 

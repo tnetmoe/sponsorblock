@@ -6,6 +6,6 @@ use axum::{
 };
 use sb_api_types::sb::viewed_video_sponsor_time::ViewedVideoSponsorTimeRequestQuery;
 
-pub async fn post_view(Query(query): Query<ViewedVideoSponsorTimeRequestQuery>) -> Result<Json<()>, StatusCode> {
+pub async fn post_view(Query(_query): Query<ViewedVideoSponsorTimeRequestQuery>) -> Result<Json<()>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }

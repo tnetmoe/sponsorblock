@@ -6,6 +6,6 @@ use axum::{
 };
 use sb_api_types::sb::user_stats::{UserStatsRequestQuery, UserStatsResponseBody};
 
-pub async fn get_user_stats(Query(query): Query<UserStatsRequestQuery>) -> Result<Json<UserStatsResponseBody>, StatusCode> {
+pub async fn get_user_stats(Query(_query): Query<UserStatsRequestQuery>) -> Result<Json<UserStatsResponseBody>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }

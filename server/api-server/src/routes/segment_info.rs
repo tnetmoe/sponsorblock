@@ -6,6 +6,6 @@ use axum::{
 };
 use sb_api_types::sb::segment_info::{SegmentInfoRequestQuery, SegmentInfoResponseBody};
 
-pub async fn get_segment_info(Query(query): Query<SegmentInfoRequestQuery>) -> Result<Json<SegmentInfoResponseBody>, StatusCode> {
+pub async fn get_segment_info(Query(_query): Query<SegmentInfoRequestQuery>) -> Result<Json<SegmentInfoResponseBody>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }

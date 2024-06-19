@@ -6,6 +6,6 @@ use axum::{
 };
 use sb_api_types::sb::skip_segments::get_hash::{SkipSegmentsHashRequestQuery, SkipSegmentsHashResponseBody};
 
-pub async fn get_hash(Query(query): Query<SkipSegmentsHashRequestQuery>) -> Result<Json<SkipSegmentsHashResponseBody>, StatusCode> {
+pub async fn get_hash(Query(_query): Query<SkipSegmentsHashRequestQuery>) -> Result<Json<SkipSegmentsHashResponseBody>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }

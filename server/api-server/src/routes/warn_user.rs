@@ -6,6 +6,6 @@ use axum::{
 };
 use sb_api_types::sb::warn_user::WarnUserRequestBody;
 
-pub async fn post_warn_user(Json(body): Json<WarnUserRequestBody>) -> Result<Json<()>, StatusCode> {
+pub async fn post_warn_user(Json(_body): Json<WarnUserRequestBody>) -> Result<Json<()>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }

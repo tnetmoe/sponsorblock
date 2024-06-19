@@ -20,10 +20,10 @@ pub async fn post_create(
     }
 }
 
-async fn handle_create_query(query: SkipSegmentsRequestQuery) -> Result<Json<SkipSegmentsResponseBody>, StatusCode> {
+async fn handle_create_query(_query: SkipSegmentsRequestQuery) -> Result<Json<SkipSegmentsResponseBody>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }
 
-async fn handle_create_body(body: SkipSegmentsRequestBody) -> Result<Json<SkipSegmentsResponseBody>, StatusCode> {
+async fn handle_create_body(_body: SkipSegmentsRequestBody) -> Result<Json<SkipSegmentsResponseBody>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }

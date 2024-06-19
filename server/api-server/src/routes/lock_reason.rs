@@ -6,6 +6,6 @@ use axum::{
 };
 use sb_api_types::sb::lock_reason::{LockReasonRequestQuery, LockReasonResponseBody};
 
-pub async fn get_lock_reason(Query(query): Query<LockReasonRequestQuery>) -> Result<Json<LockReasonResponseBody>, StatusCode> {
+pub async fn get_lock_reason(Query(_query): Query<LockReasonRequestQuery>) -> Result<Json<LockReasonResponseBody>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }

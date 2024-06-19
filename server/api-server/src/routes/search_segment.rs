@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 //! GET `/api/searchSegments`
 use axum::{
-    body, extract::{Json, Query}, http::StatusCode
+    extract::{Json, Query}, http::StatusCode
 };
 use sb_api_types::sb::search_segments::{SearchSegmentsRequest, SearchSegmentsResponseBody};
 
@@ -18,10 +18,10 @@ pub async fn get_search_segments(
     }
 }
 
-async fn handle_query(query: SearchSegmentsRequest) -> Result<Json<SearchSegmentsResponseBody>, StatusCode> {
+async fn handle_query(_query: SearchSegmentsRequest) -> Result<Json<SearchSegmentsResponseBody>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }
 
-async fn handle_body(body: SearchSegmentsRequest) -> Result<Json<SearchSegmentsResponseBody>, StatusCode> {
+async fn handle_body(_body: SearchSegmentsRequest) -> Result<Json<SearchSegmentsResponseBody>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }

@@ -6,6 +6,6 @@ use axum::{
 };
 use sb_api_types::sb::status::StatusResponseBody;
 
-pub async fn get_status_value(Path(value): Path<String>) -> Result<Json<StatusResponseBody>, StatusCode> {
+pub async fn get_status_value(Path(_value): Path<String>) -> Result<Json<StatusResponseBody>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }

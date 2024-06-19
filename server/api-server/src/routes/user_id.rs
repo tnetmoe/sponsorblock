@@ -6,6 +6,6 @@ use axum::{
 };
 use sb_api_types::sb::user_id::{UserIDRequestQuery, UserIDResponseBody};
 
-pub async fn get_user_name_search(Query(query): Query<UserIDRequestQuery>) -> Result<Json<UserIDResponseBody>, StatusCode> {
+pub async fn get_user_name_search(Query(_query): Query<UserIDRequestQuery>) -> Result<Json<UserIDResponseBody>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }

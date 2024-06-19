@@ -6,6 +6,6 @@ use axum::{
 };
 use sb_api_types::sb::lock_categories::delete::{LockCategoriesRequestBody, LockCategoriesResponseBody};
 
-pub async fn delete_category_lock(Json(body): Json<LockCategoriesRequestBody>) -> Result<Json<LockCategoriesResponseBody>, StatusCode> {
+pub async fn delete_category_lock(Json(_body): Json<LockCategoriesRequestBody>) -> Result<Json<LockCategoriesResponseBody>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }

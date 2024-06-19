@@ -6,6 +6,6 @@ use axum::{
 };
 use sb_api_types::sb::get_top_users::{GetTopUsersRequestQuery, GetTopUsersResponseBody};
 
-pub async fn get_top_users(Query(query): Query<GetTopUsersRequestQuery>) -> Result<Json<GetTopUsersResponseBody>, StatusCode> {
+pub async fn get_top_users(Query(_query): Query<GetTopUsersRequestQuery>) -> Result<Json<GetTopUsersResponseBody>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }

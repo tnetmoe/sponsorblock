@@ -6,6 +6,6 @@ use axum::{
 };
 use sb_api_types::sb::set_username::SetUsernameRequestQuery;
 
-pub async fn post_set_username(Query(query): Query<SetUsernameRequestQuery>) -> Result<Json<()>, StatusCode> {
+pub async fn post_set_username(Query(_query): Query<SetUsernameRequestQuery>) -> Result<Json<()>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }

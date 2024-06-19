@@ -6,6 +6,6 @@ use axum::{
 };
 use sb_api_types::sb::user_info::{UserInfoRequestQuery, UserInfoResponseBody};
 
-pub async fn get_user_info(Query(query): Query<UserInfoRequestQuery>) -> Result<Json<UserInfoResponseBody>, StatusCode> {
+pub async fn get_user_info(Query(_query): Query<UserInfoRequestQuery>) -> Result<Json<UserInfoResponseBody>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }

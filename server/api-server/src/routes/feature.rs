@@ -6,6 +6,6 @@ use axum::{
 };
 use sb_api_types::sb::feature::FeatureRequestBody;
 
-pub async fn post_feature(Json(body): Json<FeatureRequestBody>) -> Result<Json<()>, StatusCode> {
+pub async fn post_feature(Json(_body): Json<FeatureRequestBody>) -> Result<Json<()>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }

@@ -6,6 +6,6 @@ use axum::{
 };
 use sb_api_types::sb::clear_cache::ClearCacheRequestBody;
 
-pub async fn post_clear_cache(Json(body): Json<ClearCacheRequestBody>) -> Result<Json<()>, StatusCode> {
+pub async fn post_clear_cache(Json(_body): Json<ClearCacheRequestBody>) -> Result<Json<()>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }

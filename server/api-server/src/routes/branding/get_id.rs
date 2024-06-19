@@ -2,10 +2,10 @@
 //! GET `/api/branding`
 use axum::{
     http::StatusCode,
-    extract::{Path, Query, Json}
+    extract::{Query, Json}
 };
 use sb_api_types::da::branding::get::{BrandingRequestQuery, BrandingResponseBody};
 
-pub async fn get_id(Query(query): Query<BrandingRequestQuery>) -> Result<Json<BrandingResponseBody>, StatusCode> {
+pub async fn get_id(Query(_query): Query<BrandingRequestQuery>) -> Result<Json<BrandingResponseBody>, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }
