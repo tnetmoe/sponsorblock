@@ -10,6 +10,6 @@ use sb_api_types::sb::add_user_as_temp_vip::{
 
 pub async fn post_add_user_as_temp_vip(
     Query(_query): Query<AddUserAsTempVIPRequestQuery>,
-) -> Result<Json<AddUserAsTempVIPResponseBody>, StatusCode> {
+) -> Result<AddUserAsTempVIPResponseBody, StatusCode> {
     Err(StatusCode::NOT_IMPLEMENTED)
 }
