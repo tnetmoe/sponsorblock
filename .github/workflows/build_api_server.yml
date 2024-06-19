@@ -1,0 +1,107 @@
+name: Build API Server
+
+on:
+  release:
+    types: [published]
+  workflow_run:
+    workflows: [Cargo]
+    types:
+      - completed
+
+jobs:
+  build:
+    name: Build api server ${{ github.ref }} for ${{ matrix.target }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        rust: [stable]
+        # https://doc.rust-lang.org/nightly/rustc/platform-support.html
+        target: [
+            aarch64-unknown-linux-gnu, #t1
+            aarch64-unknown-linux-musl, #t2
+            arm-unknown-linux-gnueabi, #t2
+            arm-unknown-linux-gnueabihf, #t2
+            armv7-unknown-linux-gnueabihf, #t2
+            i686-unknown-linux-gnu, #t1
+            loongarch64-unknown-linux-gnu, #t2
+            powerpc-unknown-linux-gnu, #t2
+            powerpc64-unknown-linux-gnu, #t2
+            powerpc64le-unknown-linux-gnu, #t2
+            riscv64gc-unknown-linux-gnu, #t2
+            s390x-unknown-linux-gnu, #t2
+            x86_64-unknown-linux-gnu, #t1
+            x86_64-unknown-linux-musl, #t2
+            x86_64-unknown-freebsd, #t2
+            x86_64-unknown-illumos, #t2
+            x86_64-unknown-netbsd #t2
+        ]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          profile: minimal
+          override: true
+          target: ${{ matrix.target }}
+      - name: Build
+        uses: actions-rs/cargo@v1
+        with:
+          use-cross: true
+          command: build
+          args: --release --target ${{ matrix.target }} --bin sb-api-server
+      - name: Archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-server_${{ github.ref_name }}_${{ matrix.target }}
+          path: target/${{ matrix.target }}/release/api-server
+
+  docker:
+    name: Build api server ${{ github.ref }} Docker image
+    if: github.event_name == 'release' && github.event.action == 'published'
+    runs-on: ubuntu-latest
+    steps:
+      # Commented out because Docker hub doesn't have free orgs anymore
+      #- name: Log in to Docker Hub
+      #  uses: docker/login-action@v3
+      #  with:
+      #    username: ${{ secrets.DOCKER_USERNAME }}
+      #    password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+        with:
+          platform: linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6,linux/riscv64,linux/ppc64le,linux/s390x
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/${{ github.repository }} # |
+            #my-docker-hub-namespace/my-docker-hub-repository
+          tags: |
+            type=ref
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}
+            type=semver,pattern={{major}}.{{minor}}
+
+      - name: Build and push Docker images
+        id: push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}

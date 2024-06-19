@@ -6,17 +6,17 @@ use serde::{Serialize, Deserialize};
 /// payload
 #[derive(Serialize, Deserialize)]
 pub struct StatusResponseBody {
-    pub uptime: i64,
-    pub commit: String,
-    pub db: i64,
+    pub uptime: Option<i64>,
+    pub commit: Option<String>,
+    pub db: Option<i64>,
     #[serde(rename = "startTime")]
-    pub start_time: i64,
+    pub start_time: Option<i64>,
     #[serde(rename = "processTime")]
-    pub process_time: i64,
+    pub process_time: Option<i64>,
     #[serde(rename = "redisProcessTime")]
-    pub redis_process_time: i64,
-    pub loadavg: [f64; 2],
+    pub redis_process_time: Option<i64>,
+    pub loadavg: Option<[f64; 2]>,
     #[serde(rename = "statusRequests")]
-    pub status_requests: i64,
-    pub hostname: String
+    pub status_requests: Option<i64>,
+    pub hostname: Option<String>
 }

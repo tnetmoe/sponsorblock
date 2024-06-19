@@ -4,8 +4,12 @@
 ## Contents
 | Name | Description
 | :--- | :---- |
-| [lib/api-types](./lib/api-types) | types
+| [lib/api-types](./lib/api-types) | API types
+| [server/api-server](./server/api-server) | Rust port of SponsorBlockServer
+
+## Images
+See the **Images** section in the README files for more information.
+- [server/api-server](./server/api-server/README.md#images)
 
 ## License
-[AGPL-3.0](./LICENSES/AGPL-3.0) \
- \
+See [COPYING](./COPYING)

@@ -5,7 +5,7 @@ use serde::{Serialize, Deserialize};
 
 /// url params
 #[derive(Serialize, Deserialize)]
-pub struct SetUsernameQuery {
+pub struct SetUsernameRequestQuery {
     #[serde(rename = "userID")]
     pub user_id: String,
     pub username: Option<String>,
