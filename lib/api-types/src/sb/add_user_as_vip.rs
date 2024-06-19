@@ -10,5 +10,5 @@ pub struct AddUserAsVIPRequestQuery {
     pub user_id: String,
     #[serde(rename = "adminUserID")]
     pub admin_user_id: String,
-    pub enabled: String
+    pub enabled: Option<String>
 }
