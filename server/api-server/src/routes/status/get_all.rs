@@ -1,9 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 //! GET `/api/status`
-use axum::{
-    extract::Json,
-    http::StatusCode,
-};
+use axum::{extract::Json, http::StatusCode};
 
 use sb_api_types::sb::status::StatusResponseBody;
 

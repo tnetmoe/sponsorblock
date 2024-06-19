@@ -1,10 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 mod get_all;
 mod get_value;
-use axum::{
-    routing::get,
-    Router
-};
+use axum::{routing::get, Router};
 
 pub fn routes() -> Router {
     Router::new()

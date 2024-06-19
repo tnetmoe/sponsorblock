@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: AGPL-3.0-only
-mod get_id;
-mod get_hash;
-mod post_lock;
 mod delete_id;
+mod get_hash;
+mod get_id;
+mod post_lock;
 use axum::{
-    routing::{get, post, delete},
-    Router
+    routing::{delete, get, post},
+    Router,
 };
 
 pub fn routes() -> Router {
