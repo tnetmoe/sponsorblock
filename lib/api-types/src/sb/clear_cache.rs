@@ -13,5 +13,20 @@ pub struct ClearCacheRequestBody {
 }
 
 /// payload
+/// while documented as:
+/// ```json
+/// {
+///    String
+/// }
+/// ```
+/// it's actually:
+/// ```json
+/// {
+///   "message": "String"
+/// }
+/// ```
+/// https://github.com/ajayyy/SponsorBlockServer/blob/a181d52fb2d9e04399510c3f5856ed0072acce09/src/routes/postClearCache.ts#L53
 #[derive(Serialize, Deserialize)]
-pub struct ClearCacheResponseBody(String);
+pub struct ClearCacheResponseBody {
+    message: String
+}

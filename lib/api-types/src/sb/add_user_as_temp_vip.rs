@@ -17,5 +17,15 @@ pub struct AddUserAsTempVIPRequestQuery {
 }
 
 /// payload
-#[derive(Serialize, Deserialize)]
-pub struct AddUserAsTempVIPResponseBody(String, String);
+/// 
+/// while documented as:
+/// ```json
+/// {
+///     String
+///     String
+/// }
+/// ```
+/// it's actually just a single plain text string
+/// https://github.com/ajayyy/SponsorBlockServer/blob/a181d52fb2d9e04399510c3f5856ed0072acce09/src/routes/addUserAsTempVIP.ts#L67
+#[allow(dead_code)]
+pub struct AddUserAsTempVIPResponseBody(String);
