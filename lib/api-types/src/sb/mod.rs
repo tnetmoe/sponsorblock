@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 //! https://wiki.sponsor.ajay.app/w/API_Docs
+#![cfg_attr(rustfmt, rustfmt_skip)]
+
 // In the order as currently listed on the wiki.
 pub mod skip_segments;
 pub mod vote_on_sponsor_time;
