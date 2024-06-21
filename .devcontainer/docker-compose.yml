@@ -1,0 +1,36 @@
+# https://containers.dev/guide/dockerfile
+version: '3.8'
+
+networks:
+  devcontainer:
+
+volumes:
+  postgres:
+
+services:
+  devcontainer:
+    image: mcr.microsoft.com/devcontainers/rust:1-1-bookworm
+    command: sleep infinity
+    volumes:
+      - ../:/workspace:cached
+    networks:
+      - devcontainer
+    environment:
+      - DATABASE_URL=postgres://devcontainer:devcontainer@postgres:5432/sponsorblock
+  postgres:
+    image: postgres:16
+    networks:
+      - devcontainer
+    environment:
+      POSTGRES_DB: sponsorblock
+      POSTGRES_USER: devcontainer
+      POSTGRES_PASSWORD: devcontainer
+    volumes:
+      - ./scripts/:/docker-entrypoint-initdb.d/
+      - postgres:/var/lib/postgresql/data
+  adminer:
+    image: adminer
+    networks:
+      - devcontainer
+    ports:
+      - 8080:8080
