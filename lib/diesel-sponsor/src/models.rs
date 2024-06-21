@@ -2,8 +2,8 @@
 #![allow(unused)]
 #![allow(non_snake_case)]
 
-use diesel::prelude::*;
 use crate::schema::*;
+use diesel::prelude::*;
 
 #[derive(Queryable, Debug, Identifiable)]
 #[diesel(primary_key(UUID))]
@@ -230,4 +230,3 @@ pub struct Warning {
     pub reason: String,
     pub type_: Option<i32>,
 }
-
