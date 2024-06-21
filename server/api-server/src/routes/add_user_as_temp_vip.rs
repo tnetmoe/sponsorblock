@@ -1,8 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 //! POST `/api/addUserAsTempVip`
-use axum::{
-    extract::Query, http::StatusCode, response::Response
-};
+use axum::{extract::Query, http::StatusCode, response::Response};
 #[allow(unused_imports)]
 use sb_api_types::sb::add_user_as_temp_vip::{
     AddUserAsTempVIPRequestQuery, AddUserAsTempVIPResponseBody,
