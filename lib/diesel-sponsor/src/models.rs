@@ -2,25 +2,10 @@
 #![allow(unused)]
 
 use crate::schema::{
-    archived_sponsor_times,
-    category_votes,
-    config,
-    lock_categories,
-    ratings,
-    shadow_banned_ips,
-    shadow_banned_users,
-    sponsor_times,
-    thumbnail_timestamps,
-    thumbnail_votes,
-    thumbnails,
-    title_votes,
-    titles,
-    unlisted_videos,
-    user_features,
-    user_names,
-    video_info,
-    vip_users,
-    warnings
+    archived_sponsor_times, category_votes, config, lock_categories, ratings, shadow_banned_ips,
+    shadow_banned_users, sponsor_times, thumbnail_timestamps, thumbnail_votes, thumbnails,
+    title_votes, titles, unlisted_videos, user_features, user_names, video_info, vip_users,
+    warnings,
 };
 use diesel::prelude::*;
 
@@ -249,4 +234,3 @@ pub struct Warning {
     pub reason: String,
     pub type_: Option<i32>,
 }
-
