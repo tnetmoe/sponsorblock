@@ -1,8 +1,6 @@
 name: Build API Server
 
 on:
-  release:
-    types: [published]
   workflow_run:
     workflows: [Cargo]
     types:
@@ -11,6 +9,7 @@ on:
 jobs:
   build:
     name: Build api server ${{ github.ref }} for ${{ matrix.target }}
+    if: github.event_name == 'release' && github.event.action == 'published'
     runs-on: ubuntu-latest
     strategy:
       matrix:
