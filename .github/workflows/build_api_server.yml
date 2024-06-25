@@ -23,7 +23,6 @@ jobs:
             arm-unknown-linux-gnueabihf, #t2
             armv7-unknown-linux-gnueabihf, #t2
             i686-unknown-linux-gnu, #t1
-            loongarch64-unknown-linux-gnu, #t2
             powerpc-unknown-linux-gnu, #t2
             powerpc64-unknown-linux-gnu, #t2
             powerpc64le-unknown-linux-gnu, #t2
