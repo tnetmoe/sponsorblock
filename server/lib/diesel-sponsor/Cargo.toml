@@ -9,4 +9,4 @@ license = "AGPL-3.0-only"
 readme = "README.md"
 
 [dependencies]
-diesel = { version = "2.2.1", features = ["postgres"] }
+diesel = { version = "2.2.2", features = ["postgres"] }
