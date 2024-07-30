@@ -5,6 +5,7 @@ description = "SponsorBlock api server"
 authors = ["Tristan <tristan@tnet.moe>"]
 edition = "2021"
 repository = "https://github.com/tnetmoe/sponsorblock"
+license = "AGPL-3.0-only OR EUPL-1.2-only"
 
 [[bin]]
 name = "sb-api-server"

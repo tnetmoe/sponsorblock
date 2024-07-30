@@ -1,9 +1,16 @@
+**LICENSE**
+
 The project is provided under:
-    SPDX-License-Identifier: AGPL-3.0-only
+    SPDX-License-Identifier: AGPL-3.0-only OR EUPL-2.1-only
 
-Being under the terms of the GNU Affero General Public License version 3 only, according with:
+Being dual licensed under the terms of the GNU Affero General Public License version 3 only OR European Union Public License version 2.1 only, according with:
     LICENSES/AGPL-3.0
+    LICENSES/EUPL-2.1
 
-The license applies to all parts of the project, including the source code, its documentation and supplementary files unless otherwise directly indicated in the file.
+**SCOPE**
 
-All contributions to the project are subject to this COPYING file.
+The terms apply to all parts of the project, including the source code, its documentation, and supplementary files unless otherwise directly indicated in the file, at the project root or in the software root.
+
+**CONTRIBUTIONS**
+
+All contributions to the project are subject to the terms of this COPYING file.
