@@ -1,6 +1,6 @@
 [workspace]
 members = [
-    "server/api-server",
     "lib/api-types",
-    "lib/diesel-sponsor"
+    "server/api-server",
+    "server/lib/diesel-sponsor"
 ]
