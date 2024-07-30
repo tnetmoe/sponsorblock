@@ -1,7 +1,15 @@
 # SponsorBlock
 [SponsorBlock](https://github.com/ajayyy/SponsorBlock), [SponsorBlockServer](https://github.com/ajayyy/SponsorBlockServer).
 
+## Contents
+| Name | Description
+| :--- | :---- |
+| [lib/api-types](./lib/api-types) | API types
+| [server/api-server](./server/api-server) | Rust port of SponsorBlockServer
+
+## Images
+See the **Images** section in the README files for more information.
+- [server/api-server](./server/api-server/README.md#images)
+
 ## License
-[AGPL-3.0](./LICENSE) \
-SPDX-License-Identifier: AGPL-3.0-only \
-The license applies to all parts of the project, including the source code, its documentation and supplementary files unless otherwise directly indicated the file.
+See [COPYING](./COPYING)

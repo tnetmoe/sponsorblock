@@ -1,0 +1,12 @@
+[package]
+name = "sb-diesel-sponsor"
+description = "SponsorBlock api types"
+version = "0.1.0"
+authors = ["Tristan <tristan@tnet.moe>"]
+repository = "https://github.com/tnetmoe/sponsorblock"
+edition = "2021"
+license = "AGPL-3.0-only"
+readme = "README.md"
+
+[dependencies]
+diesel = { version = "2.2.1", features = ["postgres"] }
